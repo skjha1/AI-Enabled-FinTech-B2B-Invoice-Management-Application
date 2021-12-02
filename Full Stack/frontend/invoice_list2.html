@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="invoice_list.css">
+    <title>High Radius Front End</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     
+</head>
+
+
+
+<body class="container"> 
+  <!---Class container for dark background-->
+    <div id="outer_frame">
+        <div>
+            <div>
+                <img id="abx_text" src="images/Group 20399.png">
+    
+                <img  src="images/logo.png" id="logo"><br>
+            </div>
+    
+    
+            <div id="invoice_list">
+                Invoice List
+            </div>
+        </div>
+
+
+        <div id="inner_back">
+            
+            <div id="button_ri8">
+               		<button  type="submit" id="add" class="add_button"> + Add </button>
+                    <button  type="submit" id="edit" class="edit_btn"> /Edit</button>
+                    <button  type="submit" id="del" class="delete_btn"> Delete</button> </button>
+                    <input type="text" id= "search" placeholder="Search by Invoice Number">
+            </div>
+
+            
+            <div id="cust_info">
+                <table id="table_cust_info"  cellpadding=15>
+                    
+                      
+                            <tr>
+                                <td><input type="checkbox" name="select" id="all_checkbox" onclick="highlight_all();"></td>
+                                <th>Customer Name</th>
+                                <th>Customer #</th>
+                                <th>Invoice #</th>
+                                <th>Invoice Amount</th>
+                                <th>Due Date</th>
+                                <th>Predicted Payment Date</th>
+                                <th>Notes</th>
+                            </tr>
+                            <tbody id="table_data_1">
+        
+                            </tbody>
+                            
+                </table>
+            </div>
+            <div class = "page-left-right">
+                <button id = "page-left"><span class = "arrows"><</span></button>
+                <button id = "page-right"><span class = "arrows">></span></button>
+            </div>
+
+                 
+
+
+
+               
+    
+
+
+        </div>
+        
+
+        
+        
+    
+    <div class="overlay hidden"></div>
+    <div class="edit_inv hidden">
+        <div class="edit_heading">
+            <div id=#edit-head-text><h2>Edit Inv</h2></div>  
+            <div id=edit_cross>
+                <img src="images\baseline-close-24px.svg">
+            </div>   
+        </div>
+        <div id=edit_frm>
+            <div class="edit_input_block">
+                <label class="edit_amount">Invoice Amount*</label>
+                <input type="text" name="total_open_amount" id="total_open_amount_1">
+            </div>
+            <div class="edit_notes_block">    
+                <label class="edit_notes">Notes</label>
+                <input type="text"  id="notes"> 
+            </div>
+        </div>
+        <div class="edit_foot">
+            
+            <input type="submit" value="Cancel" class="close_btn_3" id="cancel_button">
+           
+                <input type="submit" value="Reset"  id="reset_btn">
+                
+                <input type="submit" value="Save"  id="edit_save">
+            </div>       
+                
+        </div>
+
+        </div>
+
+
+    </div>
+        <div class = "delete_inv hidden">
+        <div class = "delete-head">
+            <p id = "delete-head-text">Delete record(s)?</p>
+            <div id = "delete_cross" >
+                <img src = "images/baseline-close-24px.svg"></img>
+            </div>
+        </div>
+        <div class = "delete-body">
+            <p id = "delete-info">
+                You'll lose your record(s) after this action. We can't recover them once you delete.
+                <br>
+                <br>
+                <br>
+                Are you sure you want to <span style = "color : #FF5E5E">permanently delete</span> them?
+            </p>
+        </div>
+        <div class = "delete-foot">
+            <button id = "delete_cancel">Cancel</button>
+            <button id = "delete_btn_2">Delete</button>
+        </div>
+    </div>
+    <div class = "add_inv hidden">
+        <div id = "add_header">
+            <p id = "add_inv_text">Add Invoice</p>
+            <div id=add_cross>
+                <img src="images\baseline-close-24px.svg">
+            </div> 
+        </div>
+        <div id = "add_body">
+            <div class = "add_left">
+                <div class = "add-cust-name">
+                    <label id = "cust_name_label" for = "cust-name">Customer Name <span style = "color : #FF5B5B">*</span></label>
+                    <input id = "name_customer" style="margin-left:1.2vw" type = "text" name = "cust-name"/>
+                </div>
+                <div class = "add-cust-no">
+                    <label id = "cust_no_label" for = "cust-no">Customer No. <span style = "color : #FF5B5B">*</span></label>
+                    <input id = "cust_number" type = "text" style="margin-left:2.5vw" name = "cust-no"/>
+                </div>
+                <div class = "add-invoice-no">
+                    <label id = "cust_inv_no_label" for = "invoice-no">Invoice No. <span style = "color : #FF5B5B">*</span></label>
+                    <input id = "invoice_id" type = "text" style="margin-left:3.95vw" name = "invoice-no"/>
+                </div>
+                <div class = "add-invoice-amt">
+                    <label id = "cust_inv_amt_label" for = "amt">Invoice Amount <span style = "color : #FF5B5B">*</span></label>
+                    <input id = "total_open_amount" type = "text" style="margin-left:1.5vw" name = "amt"/>
+                </div>
+            </div>
+            <div class = "add_body_right">
+                <div class = "add-due">
+                    <label id = "calender_label" for = "due">Date <span style = "color : #FF5B5B">*</span></label>
+                    <input id = "date" type="date" style="margin-left:1.0vw" name = "due">
+                </div>
+                <div id = "add_notes_input">
+                    <label id = "add_notes_label" for = "notes-add">Notes</label>
+                    <input id = "notes_data" type = "text" style="margin-left:1.2vw" name = "notes-add"/>
+                </div>
+            </div>
+        </div>
+        <div class = "add_foot">
+            <button id = "add_cancel">Cancel</button>
+            <div class = "add-foot-right">
+                <button id = "add_reset">Clear</button>
+                <button id = "add_save">Add</button>
+            </div>
+        </div>
+           
+        
+    </div>
+    <script type="text/javascript">
+        
+        function highlight(id)
+	    {
+		    object = document.getElementById(id).style.backgroundColor;
+		    id_num = Number(id);
+
+		    if (object == "rgb(42, 83, 104)")
+		    {
+			    if(id_num % 2 == 0)
+				    document.getElementById(id).style.backgroundColor = "#283A46";
+			    else
+				    document.getElementById(id).style.backgroundColor = "#273D49CC"
+		    } else
+			    document.getElementById(id).style.backgroundColor = "#2A5368";
+	    }
+        function highlight_all(id)
+        {
+            for (let id = 1; id <= 10; id++)
+		    {
+			    let x = document.getElementById(id);
+			    var checkBoxes = x.getElementsByTagName("INPUT");
+			    (checkBoxes[0].checked)? checkBoxes[0].checked = false : checkBoxes[0].checked = true;			
+			    highlight(id);
+		    }
+        }
+    </script>
+     
+    
+ 
+ 
+
+</body>
+
+
+<script type="text/javascript" src="index_script.js"></script>
+
+
+</html>

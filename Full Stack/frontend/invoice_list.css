@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap%27');
+
+body{
+    margin : 0;
+    padding: 0;
+}
+#outer_frame          
+{
+    width: 100vw;
+    height: 100vh;
+    background: transparent radial-gradient(closest-side at 50% 50%, #58687E 0%, #39495E 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+
+#abx_text
+{
+	position: relative;
+	top: 2.53vh;
+	left: 1.56vw;
+	width: 15.05vw;
+	height: 5.59vh;
+	opacity: 1;
+}
+
+
+#logo
+{
+	position : relative;
+	top: 2.3vh;
+	left: 27.5vw;
+	width: 12.2vw;
+	height: 5.37vh;	
+	opacity: 1;
+}
+
+
+#invoice_list
+{
+    padding-left: 40px;
+    margin-top: 19px;  
+    text-align: left;
+    color: white;
+    font-size: x-large;
+}
+
+#inner_back
+{
+    overflow-y:auto;
+    margin-left: 15px;
+    height: 82vh;
+    width:96vw;
+    background: #273D49CC;
+}
+
+.bttn
+{
+    float: right;
+    border-color: white;
+   
+    margin-top: 2.9vh;
+    color: white;
+    padding: 11px;
+    border-radius: 0.7vw;
+  
+    background-color: #273D49CC;
+}
+
+#add          /*Add Button*/
+{
+    float: right;
+    border-color: white;
+   
+    margin-top: 2.9vh;
+    color: white;
+    padding: 11px;
+    border-radius: 0.7vw;
+  
+    background-color: #273D49CC;
+    
+    margin-right: 10px;
+}
+
+#search_img            /* id attribute for search image*/
+{
+    width: 39px;
+    float: right;
+    margin-top: 2.9vh;
+    margin-right: 3.4vw;
+}
+
+#edit
+{
+    margin-right: 10px;
+}
+
+#del
+{
+    margin-right: 10px;
+    float: right;
+    border-color: white;
+   
+    margin-top: 2.9vh;
+    color: white;
+    padding: 11px;
+    border-radius: 0.7vw;
+  
+    background-color: #273D49CC;
+}
+
+#search
+{
+    background-color: #273D49CC;
+    width: 18vw;
+    height: 35px;
+    float: right;
+    margin-top: 2.9vh;
+    margin-right: 0;
+    border-color: white;
+    border-radius: 12px;
+}
+
+#button_ri8
+{
+    height: 7vh;
+    width: 98vw;
+    padding: 2px;
+}
+
+#cust_info
+{
+    padding-top: 10px;
+    margin-top: 1.8vh;
+    height: 50vh;
+    width: 98vw;
+}
+
+#table_cust_info
+{
+    width: 94vw;
+    height: 13vh;
+}
+
+th
+{
+    
+    
+    text-align:center;
+    font: normal normal normal 18px/18px Ubuntu;
+    font-size: 1.04vw;
+    letter-spacing:0px;
+    color: #97A1A9;
+    opacity: 1;
+   padding-right: 56px;
+}
+
+td
+{
+    font-size: 16px;
+    color: white;
+}
+tr:nth-child(even) {            /*Picking every 2nd child from td row to darken its background*/
+    background: #283A46 0% 0% no-repeat padding-box;
+opacity: 1;
+  }
+
+
+
+
+
+ 
+.hidden {
+  display: none;
+}
+
+.delete_inv {
+    position: absolute;
+    top: 22.5vh;
+    left: 25.8vw;
+    background: #2A3E4C 0% 0% no-repeat padding-box;
+    box-shadow: 0px 8px 24px #00000029;
+    border-radius: 6px;
+    opacity: 1;
+    width: 40vw;
+    height: 50vh;
+    z-index: 5;
+
+
+}
+
+
+.add_inv
+{
+	position: absolute;
+	top: 22.5vh;
+	left: 21.1vw;
+	width: 57.6vw;
+	height: 54.9vh;
+	background: #2A3E4C 0% 0% no-repeat padding-box;
+	box-shadow: 0px 8px 24px #00000029;
+	border-radius: 6px;
+	opacity: 1;
+	z-index : 6;
+}
+
+#add_header
+{
+    display: flex;
+    top: 22.5vh;
+    left: 35.8vw;
+    width: 56.38vw;
+    height: 9.6vh;
+    border-bottom: 2.5px solid #283A46;
+    justify-content: space-between;
+}
+
+#add_inv_text
+{
+    padding-left: 2vw;
+    text-align: left;
+    font: normal normal normal 1.45vw/3.44vw Ubuntu;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+    width: max-content;
+}
+
+#add_cross
+{
+    
+    border: 2px solid #273D49CC;
+    color: #FFFFFF;
+    margin-right: 5vh;
+    margin : 2vw ;
+    padding-bottom: .5vh;
+}
+
+.add_left
+{
+    margin-right: 8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#name_customer,#invoice_id,#cust_number,#total_open_amount
+{
+    width: 10vw;
+    height: 4.5vh;
+    background: #283A46 0% 0% no-repeat padding-box;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    margin-bottom: 3vh;
+}
+
+#cust_name_label,#cust_no_label,#cust_inv_no_label,#cust_inv_amt_label,#calender_label,#add_notes_label
+{
+    text-align: left;
+    font: normal normal normal 20px/24px Ubuntu;
+    color: #FFFFFF;
+    letter-spacing: 0.19px;
+    opacity: 1;
+    margin-bottom: -5vh;
+}
+
+#notes_data
+{
+    background: #283A46 0% 0% no-repeat padding-box;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+
+    width: 12.5vw;
+    height: 20vh;
+}
+
+#date
+{
+    background: #283A46 0% 0% no-repeat padding-box;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    height: 4.5vh;
+    width: 12.5vw;
+    font: normal normal normal 0.95vw/1.5vw Ubuntu;
+    color: #FFFFFF;
+    margin-bottom: 3vh;
+    padding : 4px;
+}
+.add_body_right
+{
+    margin-right : 2vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#add_body
+{
+    border-bottom: 2.5px solid #283A46;
+    display: flex;
+    top: 30.5vh;
+    left: 34.4vw;
+    width: 57.1vw;
+    height: 33vh;
+    border-bottom: 3.5px solid #283A46;
+    justify-content: center;
+    padding-top : 3vh;
+}
+
+.add_foot
+{
+    display: flex;
+	height : 7.20vh;
+	justify-content: space-between;
+	padding-left: 2vw;
+	padding-right: 1vw;
+	align-items : center;
+    margin-right: 2.5vw;
+}
+
+#add_cancel,#add_reset,#add_save
+{
+    width: 4.7vw;
+    height: 4.8vh;
+    background: #2A3E4C;
+    font: normal normal normal 1.04vw/1.25vw Ubuntu;
+    letter-spacing: 0px;
+    color : #FFFFFF;
+    border: 1px solid #356680;
+    font-family: Ubuntu;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+
+
+h2{
+   
+    padding-left: 3vh;
+    font: normal normal normal 28px/32px Ubuntu;
+    
+    color: white;
+    
+    opacity: 1;
+    background: #2A3E4C 0% 0% no-repeat padding-box;
+    border-radius: 10px 10px 0px 0px;
+}
+ 
+#cust_name{
+    top: 0px;
+    left: 0px;  
+    width: 153px;
+    height: 23px;
+    text-align: left;
+    font: normal normal normal 20px/24px Ubuntu;
+    letter-spacing: 0.19px;
+    color: #97A1A9;
+} 
+
+ .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+thead {
+
+
+  
+    width: 1106px;
+    height: 91px;
+    background: #2A3E4C 0% 0% no-repeat padding-box;
+    border-radius: 10px 10px 0px 0px;
+    opacity: 1;
+
+}
+
+h3 {
+    left: 437px;
+    width: 147px;
+    height: 31px;
+    text-align: left;
+    font: normal normal normal 28px/32px Ubuntu;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+    margin-left: 2vw;
+}
+
+th{
+    margin-right: 20px;
+}
+
+#cancel_button{
+font: normal normal normal 20px/24px Ubuntu;
+letter-spacing: 0px;
+color: #14AFF1;
+opacity: 1;
+padding: 0.5vw;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid #97A1A9;
+border-radius: 10px;
+}
+
+
+#cancel_button:hover {
+    border: 1px solid #14AFF1;
+}
+
+#clear_button  {
+font: normal normal normal 20px/24px Ubuntu;
+letter-spacing: 0px;
+opacity: 1;
+padding: 10px;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid #97A1A9;
+border-radius: 10px;
+color: #97A1A9;
+
+
+
+
+}
+
+#add_btn{
+font: normal normal normal 20px/24px Ubuntu;
+letter-spacing: 0px;
+opacity: 1;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid #97A1A9;
+border-radius: 10px;
+color: #97A1A9;
+}
+
+#cust_no_input,#cust_inv_no_input,#cust_name_input,#cust_inv_amt_input
+{
+    width: 10vw;
+    height: 4.5vh;
+    background: #283A46 0% 0% no-repeat padding-box;
+    border: 1px solid #356680;
+    border-radius: 10px;
+    opacity: 1;
+    margin-bottom: 3vh;
+}
+
+#buttons_div {
+    position: absolute;
+    margin: 100px 100px 100px 100px;
+    float: right;
+
+}
+
+#delete_button_1 {
+font: normal normal normal 20px/24px Ubuntu;
+color: #14AFF1;
+opacity: 1;
+margin-left: vw;
+padding: 0.5vw;
+border: 1px solid #97A1A9;
+border-radius: 10px;
+
+}
+
+#delete_para{
+    margin-top :5vh;
+    margin-left: 5vw;
+    font-size: 1.4vw;
+    
+}
+
+.delete-head
+{
+	display: flex;
+	top: 22.5vh;
+	left: 35.8;
+	width: 32.28vw;
+	height: 10.6vh;
+	border-bottom: 2.5px solid #283A46;
+	justify-content: space-between;
+}
+#delete-head-text
+{
+	text-align: left;
+	font: normal normal normal 1.25vw/1.6vw Ubuntu;
+	font-family: Ubuntu;
+	color: #FFFFFF;
+	text-transform: capitalize;
+	opacity: 1;
+	padding-left :1.56vw;
+	padding-top: 1.2vh;
+	width : 10.55vw;
+	margin-right: 2vw;
+}
+#delete_cross
+{
+	margin : 3.00vh;
+	background: transparent url('images/baseline-close-24px.svg') no-repeat;
+	border: 1px solid #273D49CC;
+	color: #FFFFFF;
+	width : 2.5vw;
+}
+
+.delete-body	
+{
+	top: 35.5vh;
+	left: 37.4vw;
+	width: 32.1vw;
+	height: 16.3vh;
+	border-bottom: 2.5px solid #283A46;
+}
+#delete-info
+{
+	text-align: left;
+	font: normal normal normal 0.95vw/1.25vw Ubuntu;
+	font-family: Ubuntu;
+	letter-spacing: 0.19px;
+	color: #FFFFFF;
+	opacity: 1;	
+	width: 25vw;
+	padding-left: 2vw;
+}
+
+.delete-foot
+{
+	display: flex;
+	height : 7.20vh;
+	justify-content: flex-end;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	align-items : center;
+}
+
+#delete_cancel
+{
+	margin-right : 2.5vw;
+}
+
+#delete_cancel,#delete_btn_2
+{
+	width: 4.7vw;
+	height: 3.8vh;
+	background: #2A3E4C;
+	font: normal normal normal 0.85vw/1.02vw Ubuntu;
+	letter-spacing: 0px;
+	color : #FFFFFF;
+	border: 1px solid #356680;
+	font-family: Ubuntu;
+	border-radius: 10px;
+	opacity: 1;
+}
+
+
+#buttons_div_2{
+    margin-top: 15vh;
+    margin-left: 20vw;
+}
+
+.delete_heading{
+    border-bottom: 2px solid #FFFFFF;
+
+}
+/* Edit Form Css */
+
+.edit_inv
+{
+    position: absolute;
+	top: 22.5vh;
+	left: 35.8vw;
+	width: 32.28vw;
+	height: 54.9vh;
+	background: #2A3E4C 0% 0% no-repeat padding-box;
+	box-shadow: 0px 8px 24px #00000029;
+	border-radius: 6px;
+	opacity: 1;
+	z-index : 6;
+}
+
+.edit_heading
+{
+	display: flex;
+	top: 22.5vh;
+	left: 35.8;
+	width: 32.28vw;
+	height: 8.6vh;
+	border-bottom: 2.5px solid #283A46;
+	justify-content: space-between;
+}
+
+#edit-head-text
+{
+	text-align: left;
+	font: normal normal normal 1.45vw/1.6vw Ubuntu;
+	font-family: Ubuntu;
+	color: #FFFFFF;
+	text-transform: capitalize;
+	opacity: 1;
+	padding-left :1.56vw;
+	width : 7.55vw;
+	margin-right: 0.26vw;
+}
+#edit_cross
+{
+	margin : 2.56vh;
+	border: 1px solid #273D49CC;
+	color: #FFFFFF;
+	width : 2.5vw;
+}
+
+
+
+.edit_btn{
+    float: right;
+    border-color: white;
+   
+    margin-top: 2.9vh;
+    color: white;
+    padding: 11px;
+    border-radius: 0.7vw;
+  
+    background-color: #273D49CC;
+}
+
+#edit_frm	
+{
+	top: 35.5vh;
+	left: 37.4vw;
+	width: 32.1vw;
+	height: 37.3vh;
+	border-bottom: 2.5px solid #283A46;
+}
+
+.edit_amount
+{
+    text-align: left;
+	font: normal normal normal 1.04vw/1.25vw Ubuntu;
+	font-family: Ubuntu;
+	letter-spacing: 0.19px;
+	color: #97A1A9;
+	opacity: 1;	
+	width: 7.6vw;
+}
+.edit_notes
+{
+    text-align: left;
+	font: normal normal normal 1.04vw/1.25vw Ubuntu;
+	font-family: Ubuntu;
+	letter-spacing: 0.19px;
+	color: #97A1A9;
+	opacity: 1;	
+	width: 7.6vw;
+	padding-top: 2vh;
+}
+
+#total_open_amount_1
+{
+	position: absolute;
+	top: 10.49vh;
+	left: 13vw;
+	width: 16.6vw;
+	height: 4.83vh;
+	background: #283A46 0% 0% no-repeat padding-box;
+	border: 1px solid #356680;
+	border-radius: 10px;
+	opacity: 1;	
+}
+
+
+.edit_notes
+{
+	position: absolute;
+	top: 20.49vh;
+	left: 13vw;
+	width: 16.6vw;
+	height: 20.83vh;
+	background: #283A46 0% 0% no-repeat padding-box;
+	border: 1px solid #356680;
+	border-radius: 10px;
+	opacity: 1;	
+}
+
+
+.edit_foot
+{
+	display: flex;
+	height : 7.20vh;
+	justify-content: space-between;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	align-items : center;
+}
+
+#cancel_button,#reset_btn,#edit_save
+{
+	width: 4.7vw;
+	height: 4.8vh;
+	background: #2A3E4C;
+	font: normal normal normal 1.04vw/1.25vw Ubuntu;
+	letter-spacing: 0px;
+	color : #FFFFFF;
+	border: 1px solid #356680;
+	font-family: Ubuntu;
+	border-radius: 10px;
+	opacity: 1;
+}
+
+
+
+.page-left-right
+  {
+      position: absolute;
+      display: flex;
+      width : 95.8vw;
+      height : 3.2vh;
+      padding-left: 0.58vw;
+      top : 55vh;
+      justify-content: space-between;
+      z-index : 2px;
+
+  }
+  #page-left,#page-right
+  {
+      width: 2vw;
+      height: 4vh;
+      background: #39495E 0% 0% no-repeat padding-box;
+      box-shadow: 0px 2px 6px #00000069;
+      opacity: 1;
+      border-radius: 20vw;
+      color: #FFFFFF;
+  }
+  .arrows
+  {
+      opacity: 1;
+      color: #97A1A9;
+      font-size: 1.2vw;
+  }
